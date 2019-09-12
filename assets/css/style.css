@@ -4,6 +4,12 @@ h1 {
     margin-bottom: 20px;
 }
 
+h2 {
+    color: #fff;
+    font-size: 25px;
+    margin-top: 20px;
+}
+
 body {
     background-image: url(../images/bg.jpg);
     padding: 0 20px;
@@ -25,4 +31,22 @@ body {
     align-items: center;
     justify-content: center;
 
+}
+.start-button {
+    background: #fff;
+    padding: 20px;
+    color: #000000;
+    width: 120px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.timer-container {
+    color: #fff;
+    font-size: 25px;
+    display: none;
+}
+
+.reset-button {
+    display: none;
 }
