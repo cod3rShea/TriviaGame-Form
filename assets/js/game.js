@@ -1,5 +1,5 @@
 function countdown() {
-    var counter = 60;
+    var counter = 30;
     var timeCountdown = setInterval(function(){
 
       counter--
@@ -27,17 +27,31 @@ let trivia = [
         answer: "Rodney Mullen"
     },
     {
-        question: "Who did the first 900?",
+        question: "What is another word for a 360 flip?",
+        choices: ["Impossible Flip", "3 1/2 flip", "Tre Bomb", "Tri Flip"],
+        answer: "Tre Bomb",
+    },
+    {
+        question: "Which famous director filmed Fully Flared ?",
+        choices: ["Spike Jonze", "Steven Spielberg", "Quentin Tarantino", "Michael Bay"],
+        answer: "Spike Jonze",
+    },
+    {
+        question: "What was Black Labels first skate video?",
+        choices: ["God Save The Label", "Black Out", "Back In Black", "Label Kills"],
+        answer: "Label Kills",
+    },
+    {
+        question: "Who was the first person to land a 900 on vert in a competition?",
         choices: ["Tony Hawk", "Tas Pappas", "Danny Way", "bob burnquist"],
         answer: "Tony Hawk",
     },
     {
-        question: "What is another word for a 360 flip?",
-        choices: ["Impossible Flip", "3 1/2 flip", "Tre Bomb", "Tri Flip"],
-        answer: "Tre Bomb",
+        question: "Who was not apart legendary skate crew Piss Drunx?",
+        choices: [" Dustin Dollin", "Ali Boulala", "Aaron Kyro", "Andrew Reynolds"],
+        answer: "Aaron Kyro",
     }
 ];
-
 
 function triviaQuestions() {
     for(var i = 0; i < trivia.length; i++) {   
@@ -47,15 +61,21 @@ function triviaQuestions() {
         $('.question-container').append(questionHeaderContent).append("<form class='choices choices-container-" + i + "' id='choices-" + i + "'>");
 
         for (var j = 0; j < trivia.length; j++) {
-            console.log(trivia[i].choices[j]);
-            var questionChoices = $('<input type="radio"' + 'name="'  + i + '"'+ 'value="' + trivia[i].choices[j] + '">' + '<label>' + trivia[i].choices[j] + '</label>');
-            var questionChoicesContent = questionChoices.text(trivia[i].choices[j]);
-            $('.choices-container-' + i).append(questionChoices).append(questionChoicesContent);
+          
 
+            if ( $('#choices-' + i + ' input').length < 4 ) {
+                var questionChoices = $('<input type="radio"' + 'name="'  + i + '"'+ 'value="' + trivia[i].choices[j] + '">' + '<label>' + trivia[i].choices[j] + '</label>');
+                var questionChoicesContent = questionChoices.text(trivia[i].choices[j]);
+                $('.choices-container-' + i).append(questionChoices).append(questionChoicesContent);
+            }
         }
+
+
     }  
     
 }
+
+
 
 function points() {
     var correct = 0;
@@ -80,6 +100,9 @@ $( document ).ready(function() {
         $(this).toggle();
         countdown();
         triviaQuestions();
+        console.log( $('#choices-0 input').length);
+
     });
-    
+
+ 
 });
