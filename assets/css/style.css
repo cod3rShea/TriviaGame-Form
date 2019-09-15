@@ -1,17 +1,28 @@
+body {
+    color: #fff;
+
+}
 h1 {
     color: #fff;
     font-size: 32px;
     margin-bottom: 20px;
+    font-family: 'Rock Salt', cursive;
 }
 
 h2 {
     color: #fff;
     font-size: 25px;
     margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+label {
+    margin: 0 10px;
+    font-family: 'Rock Salt', cursive;
 }
 
 body {
-    background-image: url(../images/bg.jpg);
+    background-image: url(../images/bg.png);
     padding: 0 20px;
 }
 
@@ -49,4 +60,9 @@ body {
 
 .reset-button {
     display: none;
+}
+
+
+.points-container {
+    font-size: 20px;
 }

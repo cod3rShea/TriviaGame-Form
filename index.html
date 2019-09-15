@@ -9,20 +9,23 @@
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <script type="text/javascript" src="assets/js/jquery-3.4.1.min.js" ></script>
     <script type="text/javascript" src="assets/js/game.js" ></script>
+    <link href="https://fonts.googleapis.com/css?family=Rock+Salt&display=swap" rel="stylesheet">
 </head>
 <body>
+    <img scr="assets/images/test.png">
     <div class="container">
         <h1>Skateboard Triva</h1>
         <a class="start-button" href="#">Start</a>  
         <div class="timer-container">
-            <span>Time Left: </span><span class="time"></span>
+            <span>Time Left: </span><span class="time">60</span>
         </div>
         <div class="question-container">
 
-          </div>
-          <a class="reset-button" href="#">Reset</a>
+        </div>
+        <div class="points-container" style="display:none">
+            Total Correct: <span class="correct-answers"></span>
+            Total Wrong: <span class="incorrect-answers"></span>
+        </div>
     </div>    
-    <footer>
-    </footer>
 </body>
 </html>
