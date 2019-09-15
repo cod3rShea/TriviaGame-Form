@@ -14,12 +14,11 @@ function countdown() {
     $('.timer-container').toggle();
 }
 
-
 let trivia = [
     {
         question: "How many wheels are on a skateboard?",
         choices: ["2",  "4", "6", "8"],
-        answer: "2",
+        answer: "4",
     },
     {
         question: "Who invented the kickflip?",
@@ -32,7 +31,7 @@ let trivia = [
         answer: "Tre Bomb",
     },
     {
-        question: "Which famous director filmed Fully Flared ?",
+        question: "Which famous director filmed Fully Flared?",
         choices: ["Spike Jonze", "Steven Spielberg", "Quentin Tarantino", "Michael Bay"],
         answer: "Spike Jonze",
     },
@@ -42,12 +41,12 @@ let trivia = [
         answer: "Label Kills",
     },
     {
-        question: "Who was the first person to land a 900 on vert in a competition?",
+        question: "Who was the first person to land a 900 in a vert competition?",
         choices: ["Tony Hawk", "Tas Pappas", "Danny Way", "bob burnquist"],
         answer: "Tony Hawk",
     },
     {
-        question: "Who was not apart legendary skate crew Piss Drunx?",
+        question: "Who was not apart of the legendary Piss Drunx skate crew?",
         choices: [" Dustin Dollin", "Ali Boulala", "Aaron Kyro", "Andrew Reynolds"],
         answer: "Aaron Kyro",
     }
@@ -75,8 +74,6 @@ function triviaQuestions() {
     
 }
 
-
-
 function points() {
     var correct = 0;
     var incorrect = 0;
@@ -100,8 +97,6 @@ $( document ).ready(function() {
         $(this).toggle();
         countdown();
         triviaQuestions();
-        console.log( $('#choices-0 input').length);
-
     });
 
  
